@@ -173,6 +173,20 @@
         }
       ]
     },
+
+    "unit-test": {
+      "name": "unit-test",
+      "description": "Run unittests",
+      "steps": [
+        {
+          "exec": "jest --passWithNoTests --updateSnapshot **/**.unit.test.(ts|js)",
+          "receiveArgs": true
+        },
+        {
+          "spawn": "eslint"
+        }
+      ]
+    },
     "test:watch": {
       "name": "test:watch",
       "description": "Run jest in watch mode",
